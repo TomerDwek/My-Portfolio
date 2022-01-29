@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    My Portfolio
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'portfolio/project.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'portfolio/images/me.png' %}" alt="Tomer - The Author Of This Portfolio">
+            <h2>TOMER'S PORTFOLIO</h2>
+        </header>
+        <p>Hi, I am Tomer, a Software Developer at Mobile Tornado and 4th-year Software Engineering student at Afeka College in Tel Aviv</p>
+    </section>
+
+    <section id="latest-projects">
+        <h2>My Latest Projects</h2>
+        <ul>
+            {% for project in projects %}
+                {% include "portfolio/includes/project.html" %}
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>During my current job, I have been involved in Back-end development using Node.js, GraphQL, and MongoDB in addition to
+            C# and WPF maintenance and development.
+        </p>
+        <p>
+            During my studies, I gained knowledge in Data Structures, C, Java and especially in Python as part of the Machine Learning
+            specialization that I chose to do.
+        </p>
+        <p>
+            Beyond that, I love innovation and enjoy exploring new technologies in my free time, learning from online courses, and 
+            building personal projects.
+        </p>
+        <p>
+            My goal is to keep on growing as a developer!
+        </p>
+    </section>
+{% endblock %}

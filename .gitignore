@@ -1,0 +1,7 @@
+/.ebextenstions
+/django_my_site
+/staticfiles
+/uploads
+/custom_storages.py
+/db.sqlite3
+/env_vars
