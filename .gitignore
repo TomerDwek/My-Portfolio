@@ -4,4 +4,4 @@
 /uploads
 /custom_storages.py
 /db.sqlite3
-/env_vars
+/env_vars.py
